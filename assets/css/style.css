@@ -1,0 +1,29 @@
+body{
+    font-family: 'Playfair Display', serif;
+    background-color: pink;
+    font-family: 'Raleway', sans-serif;
+}
+
+.wrapper{
+    background-color: white;
+    width: 80%;
+    margin:auto;
+    border-style:solid;
+    border-color:lightslategray;
+    border-width:2px;
+    font-family: 'Raleway', sans-serif;
+    margin-top:20px;
+    padding:20px;
+}
+
+#header{
+    text-align:center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.gameelem{
+    font-family: 'Raleway', sans-serif;
+    font-size:25px;
+    padding:10px;
+    text-align:center;
+}
