@@ -27,3 +27,8 @@ body{
     padding:10px;
     text-align:center;
 }
+
+#game{
+    font-size:50px;
+    margin-top:50px;
+}

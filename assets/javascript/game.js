@@ -4,9 +4,8 @@ var showArray = [];
 var guessesRemaining = 10;
 var guessArray = [];
 
-
 //Choose a random word for the user to guess
-var pick = words[Math.floor(Math.random(words.length))];
+var pick = words[Math.floor(Math.random() * words.length)];
 
 //Split the chosen word into an array containing each of its individual letters
 var pickArray = pick.split("");
@@ -29,8 +28,7 @@ for (var i=0; i<pickArray.length; i++) {
 
 //Create the initial game function displaying the start up information
 window.onload = function startGame() {
-    $("#game").text(showArray);
-    $("#guessesleft").text("Guesses Remaining: ");
+    $("#game").text(showArray.join(" "));
 }
 
 //Create keyup function to capture the user's guess
@@ -52,7 +50,7 @@ document.onkeyup = function(event){
         isMatch=true;
 
         //Update display to show chosen letter in array
-        $("#game").text(showArray);
+        $("#game").text(showArray.join(" "));
         }
 
     }
@@ -64,16 +62,16 @@ document.onkeyup = function(event){
         guessesRemaining--;
         }
     //Display guesses remaining
-    $("#guessesleft").text("Guesses Remaining: " + guessesRemaining);
+    $("#guessesleft").text(guessesRemaining);
 
     //If no more guesses, alert that the game is over
     if(guessesRemaining == 0){
-        alert("You lose!")
+        alert("You lose!");
     }
 
     //If each letter has been filled, alert that the game has been won
     if(pickArray.length==guessArray.length){
-        alert("You win!")
+        alert("You win!");
     }
 
     //Reset the game
